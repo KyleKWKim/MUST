@@ -340,7 +340,7 @@
     <a class="link-btn disabled" href="#" title="Coming Soon">
       <i class="ai ai-arxiv"></i> arXiv
     </a>
-    <a class="link-btn disabled" href="#" title="Coming Soon">
+    <a class="link-btn" href="https://github.com/KyleKWKim/MUST" target="_blank">
       <i class="fa-brands fa-github"></i> Code
     </a>
     <a class="link-btn disabled" href="#" title="Coming Soon">
@@ -377,16 +377,20 @@
     <h3>Key Components</h3>
     <ol class="method-steps">
       <li>
+        <strong>Hierarchical Feature Extraction:</strong>
+        Intra-modal self-attention aggregates WSI patches and genomic groups into global representations, followed by bidirectional cross-attention to capture complementary information.
+      </li>
+      <li>
         <strong>Algebraic Decomposition:</strong>
-        Explicit separation of modality-specific and shared components through low-rank subspace constraints, enabling deterministic recovery of shared information from any available modality.
+        A learned low-rank projection decomposes each modality into modality-specific and shared components with consistency, orthogonality, and decomposition constraints.
+      </li>
+      <li>
+        <strong>Deterministic Shared Recovery:</strong>
+        When a modality is missing, the shared component is algebraically recovered from the available modality via the invertible decomposition structure.
       </li>
       <li>
         <strong>Diffusion-Based Generation:</strong>
-        Conditional latent diffusion models synthesize missing modality-specific components, isolating stochastic generation to truly unique residuals only.
-      </li>
-      <li>
-        <strong>Bidirectional Symmetry:</strong>
-        Handles both missing pathology and missing genomics scenarios symmetrically, unlike prior unidirectional approaches.
+        Conditional latent diffusion models generate the truly modality-specific component, conditioned on the recovered shared representation and learned structural priors.
       </li>
     </ol>
   </div>
@@ -398,8 +402,26 @@
   <h2 class="section-title">Coming Soon</h2>
   <div class="coming-soon-section">
     <p style="color: var(--color-text-secondary); font-size: 0.95rem; margin-bottom: 4px;">
-      Additional contents including codes, BibTeX, and other resources will be released soon.
+      The following materials are currently being prepared and will be released here.
     </p>
+    <div class="coming-soon-grid">
+      <div class="coming-soon-card">
+        <i class="fa-solid fa-code"></i>
+        Code
+      </div>
+      <div class="coming-soon-card">
+        <i class="fa-solid fa-database"></i>
+        Pretrained Models
+      </div>
+      <div class="coming-soon-card">
+        <i class="fa-solid fa-chart-bar"></i>
+        Full Results
+      </div>
+      <div class="coming-soon-card">
+        <i class="fa-solid fa-quote-left"></i>
+        BibTeX
+      </div>
+    </div>
   </div>
 </section>
 
@@ -415,7 +437,7 @@
 
 <!-- Footer -->
 <footer>
-  &copy; 2026 Kyungwon Kim. All rights reserved.
+  &copy; 2026 Kyungwon Kim &amp; Dosik Hwang. All rights reserved.
 </footer>
 
 </body>
