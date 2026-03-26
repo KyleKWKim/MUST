@@ -5,8 +5,12 @@
 Official repository for **"MUST: Modality-Specific Representation-Aware Transformer for Diffusion-Enhanced Survival Prediction with Missing Modality"**, accepted at **CVPR 2026**.
 
 <p align="center">
-  <img src="static/images/Figure_main.png" width="100%">
+  <img src="static/images/Figure_main.pdf" width="100%">
 </p>
+
+## Updates
+
+- **[2026.03]** Paper accepted at CVPR 2026!
 
 ## Abstract
 
@@ -18,15 +22,9 @@ Accurate survival prediction from multimodal medical data is essential for preci
 - **Diffusion-Based Generation**: Conditional latent diffusion models synthesize missing modality-specific components, isolating stochastic generation to truly unique residuals only.
 - **Bidirectional Symmetry**: Handles both missing pathology and missing genomics scenarios symmetrically, unlike prior unidirectional approaches.
 
-## Updates
-
-- **[2026.03]** Paper accepted at CVPR 2026!
-
 ## Coming Soon
 
 - [ ] Code release
-- [ ] Pretrained models
-- [ ] Full results & evaluation scripts
 - [ ] BibTeX citation
 
 ## Acknowledgements
