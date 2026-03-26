@@ -5,7 +5,7 @@
 Official repository for **"MUST: Modality-Specific Representation-Aware Transformer for Diffusion-Enhanced Survival Prediction with Missing Modality"**, accepted at **CVPR 2026**.
 
 <p align="center">
-  <img src="static/images/Figure_main.pdf" width="100%">
+  <img src="static/images/Figure_main.png" width="100%">
 </p>
 
 ## Updates
