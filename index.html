@@ -5,21 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MUST: Modality-Specific Representation-Aware Transformer for Diffusion-Enhanced Survival Prediction with Missing Modality</title>
 
-  <!-- Meta tags for social sharing -->
   <meta name="description" content="MUST: A novel framework that explicitly decomposes multimodal representations into modality-specific and cross-modal components for robust survival prediction under missing modalities.">
   <meta property="og:title" content="MUST: Diffusion-Enhanced Survival Prediction with Missing Modality">
   <meta property="og:description" content="Algebraic decomposition + latent diffusion for robust multimodal survival prediction.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kylekwkim.github.io/MUST-official/">
+  <meta property="og:url" content="https://kylekwkim.github.io/MUST/">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Academicons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
   <style>
@@ -30,7 +24,6 @@
       --color-text: #1a1a2e;
       --color-text-secondary: #4a4a6a;
       --color-accent: #2563eb;
-      --color-accent-hover: #1d4ed8;
       --color-border: #e2e8f0;
       --color-bg-light: #f8fafc;
       --color-badge: #eef2ff;
@@ -38,11 +31,7 @@
       --max-width: 960px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: var(--font-body);
@@ -52,7 +41,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ===== Hero Section ===== */
     .hero {
       padding: 60px 24px 40px;
       text-align: center;
@@ -79,10 +67,8 @@
       line-height: 1.3;
       max-width: 820px;
       margin: 0 auto 28px;
-      color: var(--color-text);
     }
 
-    /* ===== Authors ===== */
     .authors {
       display: flex;
       justify-content: center;
@@ -91,24 +77,10 @@
       margin-bottom: 8px;
     }
 
-    .author {
-      font-size: 1.05rem;
-    }
-
-    .author a {
-      color: var(--color-accent);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .author a:hover {
-      text-decoration: underline;
-    }
-
-    .author sup {
-      font-size: 0.7em;
-      margin-left: 1px;
-    }
+    .author { font-size: 1.05rem; }
+    .author a { color: var(--color-accent); text-decoration: none; font-weight: 500; }
+    .author a:hover { text-decoration: underline; }
+    .author sup { font-size: 0.7em; margin-left: 1px; }
 
     .affiliations {
       text-align: center;
@@ -116,11 +88,7 @@
       color: var(--color-text-secondary);
       margin-bottom: 6px;
     }
-
-    .affiliations sup {
-      font-size: 0.75em;
-      margin-right: 2px;
-    }
+    .affiliations sup { font-size: 0.75em; margin-right: 2px; }
 
     .corresponding {
       text-align: center;
@@ -130,7 +98,6 @@
       font-style: italic;
     }
 
-    /* ===== Link Buttons ===== */
     .link-buttons {
       display: flex;
       justify-content: center;
@@ -166,19 +133,15 @@
       pointer-events: none;
     }
 
-    .link-btn i, .link-btn .ai {
-      font-size: 1.1rem;
-    }
+    .link-btn i, .link-btn .ai { font-size: 1.1rem; }
 
     .coming-soon-note {
       text-align: center;
       font-size: 0.8rem;
       color: #94a3b8;
       margin-top: 4px;
-      margin-bottom: 0;
     }
 
-    /* ===== Section Layout ===== */
     section {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -191,17 +154,16 @@
       font-weight: 700;
       text-align: center;
       margin: 48px 0 24px;
-      color: var(--color-text);
     }
 
-    /* ===== Figure ===== */
     .figure-container {
       max-width: var(--max-width);
       margin: 40px auto 0;
       padding: 0 24px;
     }
 
-    .figure-container img {
+    .figure-container img,
+    .figure-container object {
       width: 100%;
       border-radius: 6px;
       border: 1px solid var(--color-border);
@@ -218,11 +180,8 @@
       margin-right: auto;
     }
 
-    .figure-caption strong {
-      color: var(--color-text);
-    }
+    .figure-caption strong { color: var(--color-text); }
 
-    /* ===== Abstract ===== */
     .abstract-text {
       font-size: 1rem;
       line-height: 1.8;
@@ -232,7 +191,6 @@
       margin: 0 auto;
     }
 
-    /* ===== Method Overview ===== */
     .method-overview {
       background: var(--color-bg-light);
       border-radius: 12px;
@@ -245,7 +203,6 @@
       font-family: var(--font-serif);
       font-size: 1.15rem;
       margin-bottom: 16px;
-      color: var(--color-text);
     }
 
     .method-steps {
@@ -266,10 +223,8 @@
     .method-steps li::before {
       content: counter(step-counter);
       position: absolute;
-      left: 0;
-      top: 0;
-      width: 26px;
-      height: 26px;
+      left: 0; top: 0;
+      width: 26px; height: 26px;
       background: var(--color-accent);
       color: white;
       border-radius: 50%;
@@ -280,87 +235,47 @@
       justify-content: center;
     }
 
-    .method-steps li strong {
-      color: var(--color-text);
-    }
+    .method-steps li strong { color: var(--color-text); }
 
-    /* ===== Results Highlights ===== */
-    .results-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 820px;
-      margin: 0 auto 36px;
-    }
-
-    .result-card {
+    /* Coming Soon Section */
+    .coming-soon-section {
+      max-width: 640px;
+      margin: 0 auto 48px;
       text-align: center;
-      padding: 28px 20px;
-      border-radius: 12px;
-      border: 1.5px solid var(--color-border);
-      background: var(--color-bg);
-      transition: border-color 0.2s;
     }
 
-    .result-card:hover {
-      border-color: var(--color-accent);
+    .coming-soon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
     }
 
-    .result-value {
-      font-family: var(--font-serif);
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--color-accent);
-      margin-bottom: 4px;
-    }
-
-    .result-label {
-      font-size: 0.85rem;
-      color: var(--color-text-secondary);
-      line-height: 1.4;
-    }
-
-    /* ===== BibTeX ===== */
-    .bibtex-section {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 24px 60px;
-    }
-
-    .bibtex-box {
-      background: #1e293b;
-      color: #e2e8f0;
+    .coming-soon-card {
+      padding: 24px 16px;
       border-radius: 10px;
-      padding: 24px 28px;
-      font-family: 'Courier New', monospace;
-      font-size: 0.82rem;
+      border: 1.5px dashed var(--color-border);
+      color: #94a3b8;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .coming-soon-card i {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    /* Acknowledgements */
+    .ack-text {
+      font-size: 0.9rem;
+      text-align: center;
+      color: var(--color-text-secondary);
+      max-width: 800px;
+      margin: 0 auto 48px;
       line-height: 1.7;
-      overflow-x: auto;
-      position: relative;
-      max-width: 720px;
-      margin: 0 auto;
     }
 
-    .bibtex-box .copy-btn {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: #e2e8f0;
-      padding: 6px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.78rem;
-      font-family: var(--font-body);
-      transition: background 0.2s;
-    }
-
-    .bibtex-box .copy-btn:hover {
-      background: rgba(255,255,255,0.2);
-    }
-
-    /* ===== Footer ===== */
     footer {
       text-align: center;
       padding: 32px 24px;
@@ -371,30 +286,23 @@
       margin: 0 auto;
     }
 
-    footer a {
-      color: var(--color-accent);
-      text-decoration: none;
-    }
+    footer a { color: var(--color-accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* ===== Responsive ===== */
     @media (max-width: 640px) {
       .hero { padding: 40px 16px 24px; }
       .authors { gap: 16px; }
       .link-buttons { gap: 8px; }
       .link-btn { padding: 8px 14px; font-size: 0.82rem; }
       .method-overview { padding: 20px; }
-      .results-grid { grid-template-columns: 1fr 1fr; }
+      .coming-soon-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 
 <body>
 
-<!-- ===== Hero ===== -->
+<!-- Hero -->
 <div class="hero">
   <span class="venue-badge">CVPR 2026</span>
   <h1>MUST: Modality-Specific Representation-Aware Transformer for Diffusion-Enhanced Survival Prediction with Missing Modality</h1>
@@ -414,7 +322,6 @@
   </div>
   <div class="corresponding">* Corresponding author</div>
 
-  <!-- Link Buttons -->
   <div class="link-buttons">
     <a class="link-btn disabled" href="#" title="Coming Soon">
       <i class="fa-solid fa-file-pdf"></i> Paper
@@ -433,9 +340,11 @@
 </div>
 
 
-<!-- ===== Main Figure ===== -->
+<!-- Main Figure -->
 <div class="figure-container">
-  <img src="static/images/Figure_main.png" alt="Overall architecture of MUST">
+  <object data="static/images/Figure_main.pdf" type="application/pdf" width="100%" style="aspect-ratio:2/1; border-radius:6px; border:1px solid var(--color-border);">
+    <img src="static/images/Figure_main.png" alt="Overall architecture of MUST">
+  </object>
   <p class="figure-caption">
     <strong>Overall architecture of MUST.</strong>
     The framework extracts global representations via self-attention, computes shared information through bidirectional cross-attention, and decomposes each modality into modality-specific and shared components through algebraic constraints in a learned low-rank subspace. Missing modality-specific components are reconstructed via conditional latent diffusion models.
@@ -443,7 +352,7 @@
 </div>
 
 
-<!-- ===== Abstract ===== -->
+<!-- Abstract -->
 <section>
   <h2 class="section-title">Abstract</h2>
   <p class="abstract-text">
@@ -452,7 +361,7 @@
 </section>
 
 
-<!-- ===== Method Overview ===== -->
+<!-- Method -->
 <section>
   <h2 class="section-title">Method</h2>
   <div class="method-overview">
@@ -479,78 +388,48 @@
 </section>
 
 
-<!-- ===== Results ===== -->
+<!-- Coming Soon -->
 <section>
-  <h2 class="section-title">Results Highlights</h2>
-  <div class="results-grid">
-    <div class="result-card">
-      <div class="result-value">0.742</div>
-      <div class="result-label">Overall C-index<br>(Complete Data)</div>
-    </div>
-    <div class="result-card">
-      <div class="result-value">0.716</div>
-      <div class="result-label">Overall C-index<br>(Missing Genomics)</div>
-    </div>
-    <div class="result-card">
-      <div class="result-value">0.739</div>
-      <div class="result-label">Overall C-index<br>(Missing Pathology)</div>
-    </div>
-    <div class="result-card">
-      <div class="result-value">&lt;1s</div>
-      <div class="result-label">Inference Latency<br>(per patient)</div>
+  <h2 class="section-title">Coming Soon</h2>
+  <div class="coming-soon-section">
+    <p style="color: var(--color-text-secondary); font-size: 0.95rem; margin-bottom: 4px;">
+      The following materials are currently being prepared and will be released here.
+    </p>
+    <div class="coming-soon-grid">
+      <div class="coming-soon-card">
+        <i class="fa-solid fa-code"></i>
+        Code
+      </div>
+      <div class="coming-soon-card">
+        <i class="fa-solid fa-database"></i>
+        Pretrained Models
+      </div>
+      <div class="coming-soon-card">
+        <i class="fa-solid fa-chart-bar"></i>
+        Full Results
+      </div>
+      <div class="coming-soon-card">
+        <i class="fa-solid fa-quote-left"></i>
+        BibTeX
+      </div>
     </div>
   </div>
 </section>
 
 
-<!-- ===== BibTeX ===== -->
-<div class="bibtex-section">
-  <h2 class="section-title">BibTeX</h2>
-  <div class="bibtex-box">
-    <button class="copy-btn" onclick="copyBibtex()">
-      <i class="fa-regular fa-copy"></i> Copy
-    </button>
-<pre id="bibtex-content">@inproceedings{kim2026must,
-  title     = {MUST: Modality-Specific Representation-Aware
-               Transformer for Diffusion-Enhanced Survival
-               Prediction with Missing Modality},
-  author    = {Kim, Kyungwon and Hwang, Dosik},
-  booktitle = {Proceedings of the IEEE/CVF Conference on
-               Computer Vision and Pattern Recognition (CVPR)},
-  year      = {2026}
-}</pre>
-  </div>
-</div>
-
-
-<!-- ===== Acknowledgements ===== -->
+<!-- Acknowledgements -->
 <section>
   <h2 class="section-title">Acknowledgements</h2>
-  <p class="abstract-text" style="font-size: 0.9rem; text-align: center; margin-bottom: 48px;">
+  <p class="ack-text">
     This work was supported by the National Research Foundation of Korea (NRF) grant funded by the Korea government (MSIT) (No. RS-2025-16070382, RS-2025-02215070, RS-2025-02217919), Artificial Intelligence Graduate School Program at Yonsei University (RS-2020-II201361), the Korea Institute of Science and Technology (KIST) Institutional Program under Grant 26E0170.
   </p>
 </section>
 
 
-<!-- ===== Footer ===== -->
+<!-- Footer -->
 <footer>
-  This page was built using the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-  Website template is licensed under
-  <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+  &copy; 2026 Kyungwon Kim &amp; Dosik Hwang. All rights reserved.
 </footer>
-
-<script>
-function copyBibtex() {
-  const text = document.getElementById('bibtex-content').textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.querySelector('.copy-btn');
-    btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
-    setTimeout(() => {
-      btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy';
-    }, 2000);
-  });
-}
-</script>
 
 </body>
 </html>
