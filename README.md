@@ -5,15 +5,9 @@
 ### Modality-Specific Representation-Aware Transformer for<br>Diffusion-Enhanced Survival Prediction with Missing Modality
 
 <p>
-    <a href="https://kylekwkim.github.io/MUST/">
-        <img alt="Project Page" src="https://img.shields.io/badge/🌐_Project_Page-4285F4?style=for-the-badge">
-    </a>
-    <a href="https://arxiv.org/abs/2603.26071">
-        <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2603.26071-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white">
-    </a>
-    <a href="https://arxiv.org/pdf/2603.26071">
-        <img alt="Paper PDF" src="https://img.shields.io/badge/Paper_PDF-grey?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
-    </a>
+    <a href="https://kylekwkim.github.io/MUST/"><img alt="Project Page" src="https://img.shields.io/badge/🌐_Project_Page-4285F4?style=for-the-badge"></a>&nbsp;
+    <a href="https://arxiv.org/abs/2603.26071"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2603.26071-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white"></a>&nbsp;
+    <a href="https://arxiv.org/pdf/2603.26071"><img alt="Paper PDF" src="https://img.shields.io/badge/Paper_PDF-grey?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"></a>
 </p>
 
 **CVPR 2026** &nbsp;|&nbsp; Kyungwon Kim · Dosik Hwang
