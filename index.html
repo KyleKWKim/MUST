@@ -263,26 +263,53 @@
       text-align: center;
     }
 
-    .coming-soon-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
+    /* BibTeX Section */
+    .bibtex-container {
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
     }
 
-    .coming-soon-card {
-      padding: 24px 16px;
+    .bibtex-block {
+      background: var(--color-bg-light);
+      border: 1px solid var(--color-border);
       border-radius: 10px;
-      border: 1.5px dashed var(--color-border);
-      color: #94a3b8;
-      font-size: 0.9rem;
-      font-weight: 500;
+      padding: 24px 28px;
+      font-family: 'Courier New', Consolas, monospace;
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+      overflow-x: auto;
+      white-space: pre;
+      position: relative;
     }
 
-    .coming-soon-card i {
-      display: block;
-      font-size: 1.5rem;
-      margin-bottom: 8px;
+    .copy-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 0.78rem;
+      font-family: var(--font-body);
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    .copy-btn.copied {
+      color: #16a34a;
+      border-color: #16a34a;
     }
 
     /* Acknowledgements */
@@ -314,7 +341,7 @@
       .link-buttons { gap: 8px; }
       .link-btn { padding: 8px 14px; font-size: 0.82rem; }
       .method-overview { padding: 20px; }
-      .coming-soon-grid { grid-template-columns: repeat(2, 1fr); }
+      .bibtex-block { padding: 16px; font-size: 0.75rem; }
     }
   </style>
 </head>
@@ -406,8 +433,26 @@
   <h2 class="section-title">Coming Soon</h2>
   <div class="coming-soon-section">
     <p style="color: var(--color-text-secondary); font-size: 0.95rem; margin-bottom: 4px;">
-      Additional contents including codes, BibTeX, and other resources will be released soon.
+      Additional contents including codes and other resources will be released soon.
     </p>
+  </div>
+</section>
+
+
+<!-- BibTeX -->
+<section>
+  <h2 class="section-title">BibTeX</h2>
+  <div class="bibtex-container">
+    <div class="bibtex-block" id="bibtex-content"><button class="copy-btn" onclick="copyBibtex()" id="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>@misc{kim2026mustmodalityspecificrepresentationawaretransformer,
+      title={MUST: Modality-Specific Representation-Aware Transformer for
+             Diffusion-Enhanced Survival Prediction with Missing Modality}, 
+      author={Kyungwon Kim and Dosik Hwang},
+      year={2026},
+      eprint={2603.26071},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.26071}, 
+}</div>
   </div>
 </section>
 
@@ -425,6 +470,30 @@
 <footer>
   &copy; 2026 Kyungwon Kim. All rights reserved.
 </footer>
+
+<script>
+function copyBibtex() {
+  const bibtex = `@misc{kim2026mustmodalityspecificrepresentationawaretransformer,
+      title={MUST: Modality-Specific Representation-Aware Transformer for
+             Diffusion-Enhanced Survival Prediction with Missing Modality}, 
+      author={Kyungwon Kim and Dosik Hwang},
+      year={2026},
+      eprint={2603.26071},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.26071}, 
+}`;
+  navigator.clipboard.writeText(bibtex).then(() => {
+    const btn = document.getElementById('copy-btn');
+    btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
 
 </body>
 </html>
