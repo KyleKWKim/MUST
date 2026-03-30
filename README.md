@@ -1,6 +1,6 @@
 # MUST: Modality-Specific Representation-Aware Transformer for Diffusion-Enhanced Survival Prediction with Missing Modality
 
-### [Project Page](https://kylekwkim.github.io/MUST/) | [Paper (Coming Soon)]() | [arXiv (Coming Soon)]()
+### [Project Page](https://kylekwkim.github.io/MUST/) | [Paper (Coming Soon)]() | [arXiv](http://arxiv.org/abs/2603.26071)
 
 Official repository for **"MUST: Modality-Specific Representation-Aware Transformer for Diffusion-Enhanced Survival Prediction with Missing Modality"**, accepted at **CVPR 2026**.
 
@@ -25,7 +25,18 @@ Accurate survival prediction from multimodal medical data is essential for preci
 ## Coming Soon
 
 - [ ] Code release
-- [ ] BibTeX citation
+
+## BibTeX
+
+@misc{kim2026mustmodalityspecificrepresentationawaretransformer,
+      title={MUST: Modality-Specific Representation-Aware Transformer for Diffusion-Enhanced Survival Prediction with Missing Modality}, 
+      author={Kyungwon Kim and Dosik Hwang},
+      year={2026},
+      eprint={2603.26071},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.26071}, 
+}
 
 ## Acknowledgements
 
